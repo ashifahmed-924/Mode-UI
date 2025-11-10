@@ -7,12 +7,14 @@
 /* Announcement Bar */
 .announcement-bar {
   width: 100%;
-  background-color: #F5F5F5;
-  padding: 12px 0;
+  background-color: #ffffff;
+  padding: 10px 20px;   /* added more top-bottom and side space */
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #E5E5E5;
 }
+
 
 .announcement-content {
   display: flex;
@@ -26,18 +28,22 @@
 }
 
 .announcement-badge {
-display: flex;
-padding: 8px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 8px;
-align-self: stretch;
-border-bottom: 1px solid var(--Neutral-1000, #E6E7E9);
-background: var(--White, #FFF);
-border-radius: 20px;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
+  gap: 6px;
+  border-radius: 50px;
+  border: 1px solid var(--Neutral-1000, #E6E7E9);
+  border-top: none; /* 🔥 hides only the top horizontal line */
+  background: var(--Neutral-1300, #F1F1F2);
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
 }
+
+
+
 
 .announcement-text {
 color: var(Neutral-50);
@@ -86,7 +92,7 @@ font-size: 20px;
 }
 
 .nav-link {
-  color: #4a4a4a;
+  color: #363C46;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
@@ -167,30 +173,37 @@ font-size: 20px;
   z-index: 1;
   padding: 60px 40px;
   background-image: 
-    linear-gradient(to right, #F5F5F5 1px, transparent 1px),
-    linear-gradient(to bottom, #F5F5F5 1px, transparent 1px);
+      linear-gradient(to bottom, #F4EFF6 2px, transparent 2px),
+    linear-gradient(to right, #F4EFF6 2px, transparent 2px);
   background-size: 24px 24px;
   background-position: center;
   border-radius: 8px;
+
 }
 
 .hero-label {
-  color: Pri/Purple/400;
+   
+  color: #582066; /* or use a CSS variable like var(--Pri-Purple-400) */
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: block;
   margin-bottom: 16px;
+
 }
 
 .hero-headline {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #1a1a1a;
-  margin-bottom: 24px;
-  letter-spacing: -0.5px;
+  color: var(--Neutral-50, #121417);
+text-align: center;
+
+/* H700/62/SemiBold */
+font-family: sans-serif;
+font-size: 62px;
+font-style: normal;
+font-weight: 600;
+line-height: 72px; /* 116.129% */
+align-self: stretch;
 }
 
 .hero-description {
@@ -311,7 +324,7 @@ line-height: 20px; /* 142.857% */
   .hero-label {
   font-size: 14px;
   margin-bottom: 12px;
-  color: var(--Pri-Purple-400, #582066);
+
 }
 
 
